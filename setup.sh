@@ -4,7 +4,7 @@ set -eu
 
 readonly local_bin_dir=$HOME/bin
 readonly local_dotconfig_dir=$HOME/.config
-readonly dotfiles_dir=$HOME/dotfiles-rere
+readonly dotfiles_dir=$HOME/dotfiles-re
 
 function topic {
   echo -en "\033[1;30m"
@@ -17,7 +17,7 @@ topic 'Clone the repository'
 if [ -d $dotfiles_dir ]; then
   echo 'dotfiles repository already exists'
 else
-  git clone --recursive https://github.com/thanks2music/dotfile-rere.git $dotfiles_dir
+  git clone --recursive https://github.com/thanks2music/dotfile-re.git $dotfiles_dir
 fi
 
 topic 'Setup dotfiles'
@@ -35,20 +35,6 @@ for dotfile in `find $dotfiles_dir -maxdepth 1 -mindepth 1 -type f -name 'dot.*.
     cp $dotfile $dest
   fi
 done
-
-topic 'Setup Vim plugins'
-
-if [ -d $dotfiles_dir/dot.vim/bundle/neobundle.vim ]; then
-  echo 'Vim plugins are already installed'
-else
-  if type vim > /dev/null 2>&1; then
-    echo 'Installing Vim plugins'
-    git clone --recursive git://github.com/Shougo/neobundle.vim $dotfiles_dir/dot.vim/bundle/neobundle.vim
-    vim -c NeoBundleInstall -c quit
-  else
-    echo 'Not found Vim'
-  fi
-fi
 
 topic 'Setup Homebrew'
 

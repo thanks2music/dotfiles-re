@@ -1,0 +1,33 @@
+# Mac
+.DS_Store
+
+# Editer
+*~
+*.swp
+.vim/bundle/*
+
+# VCS
+tags
+
+# Package Manager
+.rvmrc
+.phpbrew
+
+# Frontend
+.sass-cache/
+*Guardfile
+
+# *Gemfile
+*Gemfile.lock
+.ruby-version
+
+# Node
+*npm-debug.log
+*node_modules
+
+# Composer
+*composer.phar
+
+# Env
+~/dotfiles/docset/
+~/dotfiles/fonts/*

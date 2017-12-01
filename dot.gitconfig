@@ -1,0 +1,114 @@
+[user]
+  name = Yoshiyuki Ito
+  email = thanks2music@gmail.com
+[github]
+  user = thanks2music
+[credential]
+  helper = osxkeychain
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+  autocrlf = input             # CRLF$B$r<+F0JQ49(B
+[color]
+  branch      = auto
+  diff        = auto
+  grep        = auto
+  interactive = auto
+  status      = auto
+  ui          = auto
+[alias]
+  st = status
+  sh = show
+  so = remote show origin
+  ft = fetch
+  up = pull --rebase       # pull rebase
+  rbm = rebase master      # master$B$X$N(Brebase$B$O$h$/;H$&$N$G(Balias
+  cm =  commit -m          # commit -m
+  co = checkout
+  cb = checkout -b         # $B%V%i%s%A:n$C$F%A%'%C%/%"%&%H(B
+  com  = checkout master   # master$B$K%A%'%C%/%"%&%H(B
+  up   = pull --rebase     # $B:G?7$K$9$k(B
+  # branch$B4XO"(B
+  br = branch
+  ba = branch -a           # origin$B$b4^$a$?A4$F$N(Bbranch$B$rI=<((B
+  bm = branch --merged     # merge$B:Q$_$N(Bbranch$B$rI=<((B
+  bn = branch --no-merged  # merge$B$7$F$J$$(Bbranch$B$rI=<((B
+  rup = remote prune origin # $B%j%b!<%H$N>uBV$r:FEY<hF@(B
+  current-branch = "!sh -c \"git branch | grep '*' | awk '{ print \\$2 }' \""
+  p4r = "!sh -c 'git push origin HEAD:refs/for/master/`git current-branch`'"
+  # log$B4XO"(B
+  wc = whatchanged         # log$B$KJQ99$5$l$?%U%!%$%k$b0l=o$K=P$9(B
+  ls = log --stat          # log$B$KJQ99$5$l$?%U%!%$%k$b0l=o$K=P$9(B
+  lg   = log --graph --branches --date=short --decorate --pretty=format:'%C(yellow)%h %Cgreen%ad %Cblue%cn %Creset%s %C(magenta)%d'
+  lp = log -p              # diff$B$b0l=o$K=P$9(B
+  la = log --pretty=\"format:%ad %h (%an): %s\" --date=short  # $B$6$C$/$j%m%0=P$9(B
+  lr = log origin          # origin$B$N(Blog
+  tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  t = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  oneline = log --pretty=oneline
+  ranking = shortlog -s -n --no-merges
+  # log$B$r(Btree$BI=<((B
+  log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+  log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+  # Rebase$B4XO"(B
+  rba  = rebase --abort
+  rbc  = rebase --continue
+  rbm  = rebase master
+  ri5  = rebase -i HEAD~5
+  ri10 = rebase -i HEAD~10
+  ref  = reflog
+  refa = reflog --all
+  rl   = reflog
+  rla  = reflog --all
+  # rm $B4X78(B
+  rmall = rm $(git ls-files --deleted) # deleted$B%U%!%$%k$rA4$F(B git rm
+  # diff$B4XO"(B
+  d  = diff
+  dm = diff master           # master$B$H$N(Bdiff
+  dw = diff --color-words
+  ds = diff --staged
+  dw = diff --color-words    # $BC18lC10L$G$$$m$D$1$F(Bdiff
+  dc = diff --cached         # add$B$5$l$F$$$k$b$N$H$N(Bdiff
+  ds = diff --staged         # $BF1>e(B(1.6.1$B0\9T(B)
+  d1 = diff HEAD~            # HEAD$B$+$i(B1$B$DA0$H(Bdiff
+  d2 = diff HEAD~~           # HEAD$B$+$i(B2$B$DA0$H(Bdiff
+  d3 = diff HEAD~~~          # HEAD$B$+$i(B3$B$DA0$H(Bdiff
+  d4 = diff HEAD~~~~         # HEAD$B$+$i(B4$B$DA0$H(Bdiff
+  d5 = diff HEAD~~~~~        # HEAD$B$+$i(B5$B$DA0$H(Bdiff
+  d10 = diff HEAD~~~~~~~~~~  # HEAD$B$+$i(B10$BA0$H(Bdiff
+  # Push
+  push-for-review = "!sh -c 'git push origin HEAD:refs/for/master/`git current-branch`'"
+  # Gerrit
+  review = "!sh -c 'git push origin HEAD:refs/for/master/`git current-branch`'"
+  # GitHub
+  pr = !git push origin $(git current-branch)
+  kokomade = tag -f '$B$3$3$^$GFI$s$@(B' origin/master
+  newspaper = log -p --reverse '$B$3$3$^$GFI$s$@(B'..origin/master
+  # merge$B$N:]$K(Bconflict$B$,5/$-$?%U%!%$%k$rJT=8(B
+  edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+  # merge$B$N:]$K(Bconflict$B$,5/$-$?%U%!%$%k$r(Badd
+  add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+  # grep$B4XO"(B
+  gg = git grep -n
+  gr = grep
+  gper = grep
+  gn = grep -n
+  # ranking
+  ranking = shortlog -s -n --no-merges
+[http]
+  postBuffer = 524288000
+[tig "bind"]
+  generic = g move-first-line
+  generic = G move-last-line
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.4/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[merge]
+	ff = false
+[pull]
+	ff = only

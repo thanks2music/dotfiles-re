@@ -18,14 +18,15 @@ binaries=(
 	zsh
 	git
 	neovim
+  anyenv
 	wget
 	curl
 	openssl
+  mysql
 	imagemagick
 	hub
 	peco
 	yarn
-	nodebrew
 	tig
 	wp-cli
 	cmake
@@ -46,13 +47,21 @@ brew tap caskroom/versions
 
 apps=(
   alfred
+  iterm2
   keepingyouawake
+  docker
+  vagrant
+  divvy
+  istat-menus
+  adobe-creative-cloud
+  bartender
   dash
+  popclip
   dropbox
   evernote
+  skitch
   firefox
   google-chrome
-  iterm2
   vlc
   slack
   sequel-pro
@@ -60,12 +69,6 @@ apps=(
   google-japanese-ime
   sourcetree
   skype
-  docker
-  vagrant
-  divvy
-  istat-menus
-  adobe-creative-cloud
-  bartender
   burn
   handbrake
   hyper
@@ -73,6 +76,10 @@ apps=(
   licecap
   mamp
   transmission
+  ip-in-menu-bar
+  firefoxdeveloperedition
+  wireshark
+  gyazo
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}

@@ -36,7 +36,7 @@ endfunction"}}}
 if exists('g:nyaovim_version')
   let s:dein_cache_path = expand('~/.cache/nyaovim/dein')
 elseif has('nvim')
-  let s:dein_cache_path = expand('~/.cache/nvim/dein')
+  let s:dein_cache_path = expand('~/.cache/vim/dein')
 else
   let s:dein_cache_path = expand('~/.cache/vim/dein')
 endif
@@ -71,8 +71,5 @@ if dein#check_install()
   call dein#install()
 endif
 
-filetype plugin indent on
-syntax enable
-
-call s:source_rc('keymap.rc.vim')
-" runtime! options.rc.vim
+runtime! options.rc.vim
+runtime! keymap.rc.vim

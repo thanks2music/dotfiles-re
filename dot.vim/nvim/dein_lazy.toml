@@ -5,7 +5,7 @@
 [[plugins]]
 repo = 'w0rp/ale'
 hook_add = '''
-source ~/.config/nvim/plugins/ale.rc.vim
+source ~/.vim/nvim/plugins/ale.rc.vim
 '''
 
 # ==========================================================
@@ -61,22 +61,6 @@ hook_source = 'call delphinus#init#unite#hook_source()'
 repo      = 'Shougo/neomru.vim'
 on_source = ['unite.vim']
 
-[[plugins]]
-repo      = 'Shougo/vimfiler'
-on_source = ['unite.vim']
-on_cmd    = [
-  'VimFiler',
-  'VimFilerExplorer',
-  'Edit',
-  'Read',
-  'Source',
-  'Write',
-]
-hook_add         = 'nnoremap `f :VimFilerBufferDir<CR>'
-hook_source      = 'call delphinus#init#vimfiler#hook_source()'
-hook_post_source = 'call delphinus#init#vimfiler#hook_post_source()'
-# }}}
-
 # ==========================================================
 # terminal
 # ==========================================================
@@ -85,14 +69,14 @@ hook_post_source = 'call delphinus#init#vimfiler#hook_post_source()'
 repo = 'kassio/neoterm'
 if = "has('nvim')"
 hook_add = '''
-source ~/.config/nvim/plugins/neoterm.rc.vim
+source ~/.vim/nvim/plugins/neoterm.rc.vim
 '''
 
 [[plugins]]
 repo = 'Shougo/vimshell'
 if = "!has('nvim')"
 hook_add = '''
-source ~/.config/nvim/plugins/vimshell.rc.vim
+source ~/.vim/nvim/plugins/vimshell.rc.vim
 '''
 
 [[plugins]]
@@ -128,6 +112,9 @@ hook_add = '''"{{{
 # コメントアウト、アンコメントを楽にする
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
 
 # ==========================================================
 # lang

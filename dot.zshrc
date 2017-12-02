@@ -1,4 +1,4 @@
-# 補完機能有効
+#n 補完機能有効
 fpath=($HOME/.zsh/completion ${fpath})
 autoload -U compinit
 compinit
@@ -11,7 +11,7 @@ export LANG=ja_JP.UTF-8
 
 # PATH
 PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
-export MANPATH=/usr/local/share/man:/usr/local/man:/usr/share/man
+export XDG_CONFIG_HOME=$HOME/.vim
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 if [ -d /usr/local/Cellar/coreutils ]; then

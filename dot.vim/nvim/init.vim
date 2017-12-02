@@ -6,6 +6,33 @@ augroup MyAutoCmd
   autocmd!
 augroup END
 
+function! s:source_rc(path, ...) abort "{{{
+	let use_global = get(a:000, 0, !has('vim_starting'))
+	let abspath = resolve(expand('~/.vim/nvim/' . a:path))
+	if !use_global
+		execute 'source' fnameescape(abspath)
+		return
+	endif
+
+	let content = map(readfile(abspath),
+				\ 'substitute(v:val,
+	"^\\W*\\zsset\\ze\\W",
+	"setglobal", "")')
+	let tempfile = tempname()
+	try
+		call writefile(content,
+		tempfile)
+		execute 'source'
+		fnameescape(tempfile)
+	finally
+		if
+			filereadable(tempfile)
+			call
+			delete(tempfile)
+		endif
+	endtry
+endfunction"}}}
+
 if exists('g:nyaovim_version')
   let s:dein_cache_path = expand('~/.cache/nyaovim/dein')
 elseif has('nvim')
@@ -47,5 +74,5 @@ endif
 filetype plugin indent on
 syntax enable
 
-runtime! options.rc.vim
-runtime! keymap.rc.vim
+call s:source_rc('keymap.rc.vim')
+" runtime! options.rc.vim

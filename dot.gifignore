@@ -4,7 +4,6 @@
 # Editer
 *~
 *.swp
-.vim/bundle/*
 
 # VCS
 tags
@@ -27,7 +26,3 @@ tags
 
 # Composer
 *composer.phar
-
-# Env
-~/dotfiles/docset/
-~/dotfiles/fonts/*

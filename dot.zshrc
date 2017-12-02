@@ -12,6 +12,7 @@ export LANG=ja_JP.UTF-8
 # PATH
 PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export MANPATH=/usr/local/share/man:/usr/local/man:/usr/share/man
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 if [ -d /usr/local/Cellar/coreutils ]; then
   PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -116,10 +117,10 @@ function edit-grepped-file {
 
 
 # エイリアスの設定
-alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -A'
 alias lal='ls -l -A'
+
 ## Env
 alias v='vi'
 alias vi='nvim'
@@ -224,8 +225,14 @@ autoload smart-insert-last-word
 autoload -U compinit; compinit
 autoload zed
 autoload zmv
-zstyle ':vcs_info:*' formats '[%b]'
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
+zstyle ':vcs_info:*' enable git svn hg bzr
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats '[%s: %b]'
+zstyle ':vcs_info:*' actionformats '[%s: %b|%a]'
+zstyle ':vcs_info:(svn|bzr):*' branchformat '%b:r%r'
+zstyle ':vcs_info:bzr:*' use-simple true
 ZSHFG=`expr $RANDOM / 128`
 
 function precmd {

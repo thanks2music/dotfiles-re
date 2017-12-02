@@ -39,13 +39,7 @@ done
 topic 'Setup Homebrew'
 
 if [ `uname` = "Darwin" ]; then
-  if type brew > /dev/null 2>&1; then
-    echo 'Homebrew is already installed'
-  else
-    echo 'Installing Homebrew'
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    $dotfiles_dir/brew.sh
-  fi
+  $dotfiles_dir/brew.sh
 else
   echo 'This environment does not need Homebrew'
 fi

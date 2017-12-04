@@ -10,9 +10,14 @@ export TERM=xterm-256color
 export LANG=ja_JP.UTF-8
 
 # PATH
-PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+# PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+# Homebrewのインストールディレクトリを変更
 export XDG_CONFIG_HOME=$HOME/.vim
+# NeoVimの環境変数
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+# Vimでクリップボードを使えるようにする
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export MANPATH=/opt/local/man:$MANPATH
 
 if [ -d /usr/local/Cellar/coreutils ]; then
   PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -352,6 +357,8 @@ if ! is_screen_or_tmux_running && shell_has_started_interactively; then
         fi
     done
 fi
+
+. $HOME/.anyenv/envs/pyenv/versions/3.6.3/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # ローカルの .zshrc を読み込む
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

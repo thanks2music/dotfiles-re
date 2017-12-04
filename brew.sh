@@ -32,6 +32,16 @@ binaries=(
 	cmake
 	libuv
 	imagemagick
+  redis
+  autoconf
+  ffmpeg
+  gcc
+  gdbm
+  libffi
+  libidn
+  libxml2
+  libxslt
+  libyaml
 )
 
 echo "installing binaries..."

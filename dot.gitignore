@@ -26,3 +26,6 @@ tags
 
 # Composer
 *composer.phar
+
+# Foreman
+*Procfile

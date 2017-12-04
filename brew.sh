@@ -19,6 +19,7 @@ binaries=(
 	git
 	neovim
   anyenv
+	yarn
 	wget
 	curl
 	openssl
@@ -26,7 +27,6 @@ binaries=(
 	imagemagick
 	hub
 	peco
-	yarn
 	tig
 	wp-cli
 	cmake

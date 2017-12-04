@@ -1,4 +1,5 @@
-au MyAutoCmd VimEnter * nested colorscheme iceberg
+let g:hybrid_use_iTerm_colors = 1
+au MyAutoCmd VimEnter * nested colorscheme hybrid
 " backgroung transparency for Ubuntu
 if has('unix')
   au MyAutoCmd VimEnter * highlight Normal ctermbg=none

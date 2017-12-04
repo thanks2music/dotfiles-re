@@ -4,6 +4,7 @@
 
 filetype plugin indent on
 syntax enable
+syntax on
 
 " ==========================================================
 " 基本設定

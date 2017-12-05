@@ -90,6 +90,7 @@ apps=(
   firefoxdeveloperedition
   wireshark
   gyazo
+  imageoptim
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}

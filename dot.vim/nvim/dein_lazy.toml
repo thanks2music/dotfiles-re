@@ -143,7 +143,7 @@ on_ft = 'html'
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
-on_ft = ['html', 'php', 'erb']
+on_ft = ['html', 'php', 'erb', 'scss', 'sass', 'css', 'jade', 'haml', 'pug', 'less']
 
 [[plugins]]
 repo = 'hallison/vim-markdown'
@@ -166,6 +166,3 @@ repo = 'mattn/gist-vim'
 
 [[plugins]]
 repo = 'mattn/webapi-vim'
-
-[[plugins]]
-repo = 'mattn/emmet-vim'

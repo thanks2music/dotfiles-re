@@ -24,7 +24,6 @@ binaries=(
 	curl
 	openssl
   mysql
-	imagemagick
 	hub
 	peco
 	tig
@@ -66,7 +65,6 @@ apps=(
   adobe-creative-cloud
   bartender
   dash
-  popclip
   dropbox
   evernote
   skitch
@@ -91,6 +89,9 @@ apps=(
   wireshark
   gyazo
   imageoptim
+  chromium
+  kindle
+  sip
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}

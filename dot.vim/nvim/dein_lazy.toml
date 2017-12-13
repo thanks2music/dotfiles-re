@@ -158,11 +158,13 @@ repo = 'cakebaker/scss-syntax.vim'
 on_ft = 'scss'
 
 # ==========================================================
-# web service
+# web apis
 # ==========================================================
 
 [[plugins]]
 repo = 'mattn/gist-vim'
+on_source = ['webapi-vim']
 
 [[plugins]]
 repo = 'mattn/webapi-vim'
+

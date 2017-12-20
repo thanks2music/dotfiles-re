@@ -32,3 +32,9 @@ tags
 
 # Yarn
 *update-notifier-npm.json
+
+# Env
+*.env
+*.netrwhist
+dot.vim/nvim/.netrwhist
+*update-notifier-sassdoc.json

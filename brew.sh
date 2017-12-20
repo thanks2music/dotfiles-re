@@ -27,6 +27,7 @@ binaries=(
 	hub
 	peco
 	tig
+  local-by-flywheel
 	wp-cli
 	cmake
 	libuv

@@ -61,6 +61,7 @@ apps=(
   keepingyouawake
   docker
   vagrant
+  java
   divvy
   istat-menus
   adobe-creative-cloud

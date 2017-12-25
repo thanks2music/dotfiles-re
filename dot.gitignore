@@ -36,5 +36,4 @@ tags
 # Env
 *.env
 *.netrwhist
-dot.vim/nvim/.netrwhist
 *update-notifier-sassdoc.json

@@ -41,3 +41,8 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+" ==========================================================
+" Color Highlight
+" ==========================================================
+autocmd BufRead,BufNewFile *.vue setlocal filetype=html
+"autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html

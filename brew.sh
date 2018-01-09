@@ -62,6 +62,7 @@ apps=(
   docker
   vagrant
   java
+  franz
   divvy
   istat-menus
   adobe-creative-cloud

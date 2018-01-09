@@ -32,8 +32,12 @@ tags
 
 # Yarn
 *update-notifier-npm.json
+*package-lock.json
 
 # Env
 *.env
-*.netrwhist
+*.cache
+*dist/
+*netrwhist
 *update-notifier-sassdoc.json
+dot.vim/configstore/*

@@ -300,6 +300,9 @@ setopt auto_cd
 # C-s, C-qを無効にする。
 setopt no_flow_control
 
+# パラメタは1/100秒単位で指定する。デフォルトは0.4秒なので、これを短くする
+KEYTIMEOUT=1
+
 # C-p C-n でコマンド履歴検索
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end

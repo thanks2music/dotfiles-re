@@ -58,6 +58,10 @@ if [ -d $HOME/Applications/MacVim.app ]; then
   alias vimdiff=$HOME/Applications/MacVim.app/Contents/MacOS/vimdiff
 fi
 
+# Go
+export GOPATH=$HOME/go
+export GO15VENDOREXPERIMENT=1
+
 # 関数
 function find-grep { find . -name $1 -type f -print | xargs grep -n --binary-files=without-match $2 }
 function find-sed { find . -name $1 -type f | xargs gsed -i $2 }

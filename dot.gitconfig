@@ -89,6 +89,7 @@
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   # merge$B$N:]$K(Bconflict$B$,5/$-$?%U%!%$%k$r(Badd
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+  wip = commit -am '[CI SKIP] WIP' --allow-empty
   # grep$B4XO"(B
   gg = git grep -n
   gr = grep

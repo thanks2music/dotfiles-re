@@ -23,6 +23,7 @@ binaries=(
 	wget
 	curl
 	openssl
+  perl
   mysql
 	hub
 	peco
@@ -42,6 +43,11 @@ binaries=(
   libxml2
   libxslt
   libyaml
+  mas
+  glide
+  heroku
+  redis
+  pngquant
 )
 
 echo "installing binaries..."

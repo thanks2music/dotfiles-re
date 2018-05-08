@@ -1,4 +1,4 @@
-#n 補完機能有効
+# 補完機能有効
 fpath=($HOME/.zsh/completion ${fpath})
 autoload -U compinit
 compinit
@@ -145,6 +145,7 @@ alias nb='nodebrew'
 ## Git
 alias g='git'
 alias s='git status'
+alias gs='git fetch'
 alias gg='grep-git-files'
 alias ga='git add -A'
 alias s='git status -s'
@@ -153,7 +154,10 @@ alias gm= 'git co master'
 alias gi='git'
 alias gp='git pull --rebase'
 alias gitrc='vi ~/.gitconfig'
+alias gitclean='git fsck && git gc && git rup'
 alias gv='edit-grepped-file'
+## Rails
+alias ms='yarn install && bundle install && bundle exec rake db:migrate && foreman start -f Procfile'
 ## Docker
 alias docker-rm-all='docker rm $(docker ps -a -q)'
 alias docker-rmi-all='docker rmi $(docker images -q)'

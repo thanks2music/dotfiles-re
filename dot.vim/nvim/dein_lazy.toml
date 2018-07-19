@@ -136,8 +136,14 @@ repo = 'mattn/emmet-vim'
 on_ft = ['html', 'php', 'erb', 'scss', 'sass', 'css', 'jade', 'haml', 'pug', 'less', 'vue']
 
 [[plugins]]
-repo = 'hallison/vim-markdown'
+repo = 'plasticboy/vim-markdown'
 on_ft = 'md'
+
+[[plugins]]
+repo = 'kannokanno/previm'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
 
 [[plugins]]
 repo = 'digitaltoad/vim-jade'
@@ -150,11 +156,7 @@ on_ft = 'scss'
 # ==========================================================
 # web apis
 # ==========================================================
-
 [[plugins]]
-repo = 'mattn/gist-vim'
-on_source = ['webapi-vim']
-
-[[plugins]]
+# NOTE: webapi-vim がrepo=でもcall dein#addでもインストールされない
 repo = 'mattn/webapi-vim'
-
+repo = 'mattn/gist-vim'

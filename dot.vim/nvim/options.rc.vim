@@ -45,5 +45,8 @@ set softtabstop=2
 " ==========================================================
 " Color Highlight
 " ==========================================================
+" Vue
 autocmd BufRead,BufNewFile *.vue setlocal filetype=html
-"autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
+" MarkDown
+au BufRead,BufNewFile *.md set filetype=markdown
+let g:previm_open_cmd = 'open -a Safari'

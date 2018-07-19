@@ -53,7 +53,6 @@ endif
 
 if dein#load_state(s:dein_cache_path)
   call dein#begin(s:dein_cache_path)
-
   call dein#load_toml('~/dotfiles-re/dot.vim/nvim/dein.toml', {'lazy' : 0})
   call dein#load_toml('~/dotfiles-re/dot.vim/nvim/dein_lazy.toml', {'lazy' : 1})
 

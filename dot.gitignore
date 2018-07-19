@@ -29,6 +29,8 @@ tags
 
 # Foreman
 *Procfile
+*Procfile_ja
+*Procfile_tw
 
 # Yarn
 *update-notifier-npm.json

@@ -52,3 +52,6 @@ map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
 map <C-TAB> <C-W>w
+
+" diffのキーバインドを変更
+command! -nargs=1 -complete=file D vertical diffsplit <args>

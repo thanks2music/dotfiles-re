@@ -15,24 +15,22 @@ brew update
 
 # Other useful binaries
 binaries=(
-	zsh
-	git
-	neovim
-  anyenv
-	yarn
-	wget
-	curl
-	openssl
+  zsh
+  git
+  neovim
+  yarn
+  wget
+  curl
+  openssl
   perl
   mysql
-	hub
-	peco
-	tig
-  local-by-flywheel
-	wp-cli
-	cmake
-	libuv
-	imagemagick
+  hub
+  peco
+  tig
+  wp-cli
+  cmake
+  libuv
+  imagemagick
   redis
   autoconf
   ffmpeg
@@ -46,12 +44,12 @@ binaries=(
   mas
   glide
   heroku
-  redis
   pngquant
 )
 
 echo "installing binaries..."
 
+# TODO brew のアップデート後、インストールされていない
 brew install ${binaries[@]}
 
 # homebrew-cask
@@ -66,23 +64,22 @@ apps=(
   iterm2
   keepingyouawake
   docker
-  vagrant
   java
   franz
   divvy
+  dropbox
   istat-menus
   adobe-creative-cloud
   bartender
   dash
-  dropbox
   evernote
   skitch
-  firefox
   google-chrome
   vlc
   slack
   sequel-pro
   sublime-text
+  atom
   google-japanese-ime
   sourcetree
   skype
@@ -94,13 +91,12 @@ apps=(
   mamp
   transmission
   ip-in-menu-bar
-  firefoxdeveloperedition
   wireshark
   gyazo
   imageoptim
   chromium
   kindle
-  sip
+  local-by-flywheel
 )
 
 brew cask install --appdir="/Applications" ${apps[@]}

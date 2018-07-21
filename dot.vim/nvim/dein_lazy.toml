@@ -153,6 +153,10 @@ on_ft = 'jade'
 repo = 'cakebaker/scss-syntax.vim'
 on_ft = 'scss'
 
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+on_ft = 'coffee'
+
 # ==========================================================
 # web apis
 # ==========================================================

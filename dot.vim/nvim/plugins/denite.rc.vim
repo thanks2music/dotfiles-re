@@ -1,0 +1,6 @@
+let g:python3_host_prog = expand('~/.anyenv/envs/pyenv/bin/pyenv')
+call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+call denite#custom#var('grep', 'command', ['ag'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', [])
+call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group', '--no-color'])

@@ -14,6 +14,17 @@ au MyAutoCmd VimEnter * highlight Visual ctermbg=216
 '''
 
 # ==========================================================
+# Denite (like Unite)
+# ==========================================================
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = '''
+source ~/.vim/nvim/plugins/denite.rc.vim
+'''
+
+
+# ==========================================================
 # linter
 # ==========================================================
 
@@ -22,4 +33,3 @@ repo = 'w0rp/ale'
 hook_add = '''
 source ~/.vim/nvim/plugins/ale.rc.vim
 '''
-

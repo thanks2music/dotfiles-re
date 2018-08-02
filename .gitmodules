@@ -4,3 +4,9 @@
 [submodule "submodules/color/iTerm2-Color-Schemes"]
 	path = submodules/color/iTerm2-Color-Schemes
 	url = https://github.com/mbadolato/iTerm2-Color-Schemes.git
+[submodule "colors/source-sans-pro"]
+	path = colors/source-sans-pro
+	url = https://github.com/adobe-fonts/source-sans-pro.git
+[submodule "colors/source-han-sans"]
+	path = colors/source-han-sans
+	url = https://github.com/adobe-fonts/source-han-sans.git

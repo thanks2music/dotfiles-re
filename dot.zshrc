@@ -19,6 +19,8 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export MANPATH=/opt/local/man:$MANPATH
 export PATH="$HOME/bin:$PATH"
+export FDK_EXE=$HOME/Library/FDK/Tools/osx
+export PATH=$FDK_EXE:$PATH
 
 if [ -d /usr/local/Cellar/coreutils ]; then
   PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"

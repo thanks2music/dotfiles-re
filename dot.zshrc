@@ -171,6 +171,9 @@ alias vimrc='vi ~/.vimrc'
 alias zshrc='vi ~/.zshrc'
 alias tmuxrc='vi ~/.tmux.conf'
 
+# Cloud Functions
+alias cf='command functions'
+
 # 細かい設定
 bindkey -e
 fpath=(~/.zsh/functions/Completion ${fpath})
@@ -289,7 +292,7 @@ case ${UID} in
     RED="%{${fg[red]}%}"
     CYAN="%{${fg[cyan]}%}"
     WHITE="%{${fg[white]}%}"
-    POH="🚬 $ "
+    POH="🚬 $"
 
     #
     # Prompt
@@ -494,3 +497,9 @@ fi
 
 # PATH の重複を消す
 typeset -U path PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/yito/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/yito/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/yito/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/yito/google-cloud-sdk/completion.zsh.inc'; fi

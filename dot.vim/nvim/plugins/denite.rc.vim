@@ -1,4 +1,4 @@
-let g:python3_host_prog = expand('~/.anyenv/envs/pyenv/bin/pyenv')
+let g:python3_host_prog = expand('~/.anyenv/envs/pyenv/versions/neovim3/bin//python3')
 call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 call denite#custom#var('grep', 'command', ['ag'])
 call denite#custom#var('grep', 'recursive_opts', [])

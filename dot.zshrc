@@ -40,6 +40,8 @@ if [ -d ${HOME}/.anyenv ] ; then
   done
 fi
 
+eval "$(pyenv virtualenv-init -)"
+
 if [ -d /usr/local/heroku ] ; then
   export PATH="/usr/local/heroku/bin:$PATH"
 fi

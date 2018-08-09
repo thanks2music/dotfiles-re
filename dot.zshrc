@@ -160,7 +160,7 @@ alias gm= 'git co master'
 alias gi='git'
 alias gp='git pull --rebase'
 alias gitrc='vi ~/.gitconfig'
-alias gitclean='git fsck && git gc && git rup'
+alias gcu='git fsck && git gc && git rup'
 alias gv='edit-grepped-file'
 ## Rails
 alias ms='yarn install && bundle install && bundle exec rake db:migrate && foreman start -f Procfile'

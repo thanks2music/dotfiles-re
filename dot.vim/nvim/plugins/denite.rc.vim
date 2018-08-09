@@ -1,6 +1,6 @@
-let g:python3_host_prog = expand('~/.anyenv/envs/pyenv/versions/neovim3/bin//python3')
+let g:python3_host_prog = expand('~/.anyenv/envs/pyenv/versions/3.6.6/bin/python3')
 nmap <silent> <C-u><C-t> :<C-u>Denite filetype<CR>
-nmap <silent> <C-u><C-p> :<C-u>Denite file_rec<CR>
+nmap <silent> <C-u><C-p> :<C-u>Denite file_rec -highlight-mode-insert=Search<CR>
 nmap <silent> <C-u><C-j> :<C-u>Denite line<CR>
 nmap <slient> <C-u><C-f> :<C-u>Denite -auto_preview grep<CR>
 nmap <silent> <C-u><C-g> :<C-u>Denite grep<CR>

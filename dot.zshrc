@@ -139,7 +139,6 @@ alias lal='ls -l -A'
 alias v='vi'
 alias vi='nvim'
 alias vd='vimdiff'
-alias t='tmux'
 alias npm-exec='PATH=$(npm bin):$PATH'
 alias search='ag -g . | ag '
 alias b='bundle exec'
@@ -460,6 +459,12 @@ zle -N peco-select-history
 bindkey '^r' peco-select-history
 
 # tmuxの自動起動
+if [ $SHLVL = 1 ]; then
+  # $ tmux で分割して起動は出来るようになったが、tmuxが自動起動しなくなったのでコメントアウト
+  # あとで見る https://qiita.com/ken11_/items/1304c2eecc2657ac6265
+  # alias tmux="tmux attach || tmux new-session \; source-file ~/dotfiles-re/tmux/session"
+fi
+
 # http://d.hatena.ne.jp/tyru/20100828/run_tmux_or_screen_at_shell_startup
 is_screen_running() {
     # tscreen also uses this varariable.
@@ -486,13 +491,14 @@ resolve_alias() {
 }
 
 if ! is_screen_or_tmux_running && shell_has_started_interactively; then
-    for cmd in tmux tscreen screen; do
+    for cmd in tmux; do
         if whence $cmd >/dev/null 2>/dev/null; then
             $(resolve_alias "$cmd")
             break
         fi
     done
 fi
+
 
 # ローカルの .zshrc を読み込む
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

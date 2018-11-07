@@ -95,6 +95,9 @@ repo = 'scrooloose/nerdtree'
 # ==========================================================
 # lang
 # ==========================================================
+[[plugins]]
+repo = 'othree/yajs.vim'
+on_ft = ['javascript']
 
 [[plugins]]
 repo = 'Shougo/neco-vim'

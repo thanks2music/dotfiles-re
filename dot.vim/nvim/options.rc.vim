@@ -42,9 +42,14 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set laststatus=2
 " ==========================================================
 " Color Highlight
 " ==========================================================
+if !has('gui_running')
+  set t_Co=256
+endif
+
 " Vue
 autocmd BufRead,BufNewFile *.vue setlocal filetype=html
 " MarkDown

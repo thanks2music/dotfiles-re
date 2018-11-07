@@ -150,3 +150,10 @@ on_ft = 'coffee'
 # NOTE: webapi-vim がrepo=でもcall dein#addでもインストールされない
 repo = 'mattn/webapi-vim'
 repo = 'mattn/gist-vim'
+
+# Statusline
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+source ~/.vim/nvim/plugins/lightline.rc.vim
+'''

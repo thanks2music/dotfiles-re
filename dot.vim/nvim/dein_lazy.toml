@@ -93,7 +93,7 @@ repo = 'scrooloose/nerdcommenter'
 repo = 'scrooloose/nerdtree'
 
 # ==========================================================
-# lang
+# Highlight, Colorschema
 # ==========================================================
 [[plugins]]
 repo = 'othree/yajs.vim'
@@ -106,7 +106,6 @@ on_ft = 'vim'
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
-
 
 [[plugins]]
 repo = 'elzr/vim-json'
@@ -146,6 +145,22 @@ on_ft = 'scss'
 repo = 'kchmck/vim-coffee-script'
 on_ft = 'coffee'
 
+# ステータスラインを良い感じにする
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+source ~/.vim/nvim/plugins/lightline.rc.vim
+'''
+
+# 無駄な空白をハイライト
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+# インデントをハイライト
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+source ~/.vim/nvim/plugins/indent.rc.vim
+'''
 # ==========================================================
 # web apis
 # ==========================================================
@@ -154,9 +169,3 @@ on_ft = 'coffee'
 repo = 'mattn/webapi-vim'
 repo = 'mattn/gist-vim'
 
-# Statusline
-[[plugins]]
-repo = 'itchyny/lightline.vim'
-hook_add = '''
-source ~/.vim/nvim/plugins/lightline.rc.vim
-'''

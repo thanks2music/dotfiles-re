@@ -30,7 +30,7 @@ tags
 # Foreman
 *Procfile
 *Procfile_ja
-*Procfile_tw
+*Procfile_zh-TW
 
 # Yarn
 *update-notifier-npm.json
@@ -43,3 +43,4 @@ tags
 *netrwhist
 *update-notifier-sassdoc.json
 dot.vim/configstore/*
+dot.vim/hub

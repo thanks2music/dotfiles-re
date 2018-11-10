@@ -164,6 +164,8 @@ alias gv='edit-grepped-file'
 ## Rails
 alias ms='yarn install && bundle install && bundle exec rake db:migrate && foreman start -f Procfile'
 alias ms-reset='yarn && bundle && bin/rails world_db:structure:load db:seed:world && bin/rails item_db:structure:load db:seed:item && bin/rails db:setup && bin/rails s'
+alias ms-ja='yarn && bundle && foreman start -f Procfile_ja'
+alias ms-tw='yarn && bundle && foreman start -f Procfile_zh-TW'
 ## Docker
 alias docker-rm-all='docker rm $(docker ps -a -q)'
 alias docker-rmi-all='docker rmi $(docker images -q)'

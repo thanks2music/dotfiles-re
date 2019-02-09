@@ -63,6 +63,11 @@ if [ -d $HOME/Applications/MacVim.app ]; then
   alias vimdiff=$HOME/Applications/MacVim.app/Contents/MacOS/vimdiff
 fi
 
+# mysql
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
 # Go
 export GOPATH=$HOME/go
 export GO15VENDOREXPERIMENT=1
@@ -509,7 +514,7 @@ fi
 typeset -U path PATH
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/yito/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/yito/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/yito/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/yito/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/yito/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/yito/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/yito/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/yito/google-cloud-sdk/completion.zsh.inc'; fi

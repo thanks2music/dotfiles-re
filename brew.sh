@@ -60,39 +60,39 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 
 apps=(
-  alfred
-  iterm2
-  keepingyouawake
-  docker
+  # alfred
+  # iterm2
+  # keepingyouawake
+  # docker
   java
-  franz
-  divvy
-  dropbox
+  # franz
+  # divvy
+  # dropbox
   istat-menus
   adobe-creative-cloud
   bartender
-  dash
+  # dash
   evernote
   skitch
-  google-chrome
+  # google-chrome
   vlc
   slack
   sequel-pro
   sublime-text
-  atom
-  google-japanese-ime
-  sourcetree
+  # atom
+  # google-japanese-ime
+  # sourcetree
   skype
   burn
   handbrake
-  hyper
+  # hyper
   keyboard-cleaner
   licecap
-  mamp
+  # mamp
   transmission
   ip-in-menu-bar
-  wireshark
-  gyazo
+  # wireshark
+  # gyazo
   imageoptim
   chromium
   kindle

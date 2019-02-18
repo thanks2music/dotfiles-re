@@ -32,15 +32,9 @@ if [ -d /usr/local/Cellar/gnu-sed ]; then
   MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 fi
 
-if [ -d ${HOME}/.anyenv ] ; then
-  PATH="$HOME/.anyenv/bin:$PATH"
-  eval "$(anyenv init -)"
-  for D in `find $HOME/.anyenv/envs -maxdepth 1 -type d`; do
-    PATH="$D/shims:$PATH"
-  done
-fi
-
-eval "$(pyenv virtualenv-init -)"
+# anyenv
+PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
 
 if [ -d /usr/local/heroku ] ; then
   export PATH="/usr/local/heroku/bin:$PATH"
@@ -159,6 +153,7 @@ alias gs='git fetch'
 alias gg='git grep'
 alias ga='git add -A'
 alias s='git status -s'
+alias sabun='git diff --stat --name-only'
 alias d='git diff'
 alias gm= 'git co master'
 alias gi='git'
@@ -178,6 +173,8 @@ alias docker-rmi-all='docker rmi $(docker images -q)'
 alias vimrc='vi ~/.vimrc'
 alias zshrc='vi ~/.zshrc'
 alias tmuxrc='vi ~/.tmux.conf'
+# Brew/pyenv
+alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
 
 # Cloud Functions
 alias cf='command functions'
@@ -305,7 +302,7 @@ case ${UID} in
     #
     # Prompt
     #
-    PROMPT='%{$fg_bold[blue]%}${USER}@%m ${RESET}${WHITE}${POH} ${RESET}'
+    # PROMPT='%{$fg_bold[blue]%}${USER}@%m ${RESET}${WHITE}${POH} ${RESET}'
     RPROMPT='${RESET}${WHITE}[${BLUE}%(5~,%-2~/.../%2~,%~)% ${WHITE}]${RESET}'
 
     #

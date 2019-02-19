@@ -10,12 +10,19 @@ export TERM=xterm-256color
 export LANG=ja_JP.UTF-8
 
 # PATH
-# PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
-# Homebrewのインストールディレクトリを変更
-export XDG_CONFIG_HOME=$HOME/.vim
+export XDG_CONFIG_HOME=$HOME/dotfiles-re
 # NeoVimの環境変数
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-# Vimでクリップボードを使えるようにする
+
+# anyenv
+if [ -d ${HOME}/.anyenv ] ; then
+  PATH="$HOME/.anyenv/bin:$PATH"
+  eval "$(anyenv init -)"
+  for D in `find $HOME/.anyenv/envs -maxdepth 1 -type d`; do
+    PATH="$D/shims:$PATH"
+  done
+fi
+
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export MANPATH=/opt/local/man:$MANPATH
 export PATH="$HOME/bin:$PATH"
@@ -31,10 +38,6 @@ if [ -d /usr/local/Cellar/gnu-sed ]; then
   PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
   MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 fi
-
-# anyenv
-PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
 
 if [ -d /usr/local/heroku ] ; then
   export PATH="/usr/local/heroku/bin:$PATH"

@@ -10,7 +10,7 @@
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = '''
-source ~/.vim/nvim/plugins/denite.rc.vim
+source ~/dotfiles-re/nvim/plugins/denite.rc.vim
 '''
 hook_post_source = '''
 " call denite#custom#var('grep', 'command',
@@ -38,6 +38,16 @@ repo      = 'Shougo/neomru.vim'
 on_source = ['Shougo/denite.nvim']
 
 # ==========================================================
+# Deoplete
+# ==========================================================
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+source ~/dotfiles-re/nvim/plugins/deoplete.rc.vim
+'''
+
+# ==========================================================
 # terminal
 # ==========================================================
 
@@ -45,14 +55,14 @@ on_source = ['Shougo/denite.nvim']
 # repo = 'kassio/neoterm'
 # if = "has('nvim')"
 # hook_add = '''
-# source ~/.vim/nvim/plugins/neoterm.rc.vim
+# source ~/dotfiles-re/nvim/plugins/neoterm.rc.vim
 # '''
 
 [[plugins]]
 repo = 'Shougo/vimshell'
 if = "!has('nvim')"
 hook_add = '''
-source ~/.vim/nvim/plugins/vimshell.rc.vim
+source ~/dotfiles-re/nvim/plugins/vimshell.rc.vim
 '''
 
 [[plugins]]
@@ -146,7 +156,7 @@ on_ft = 'coffee'
 # [[plugins]]
 # repo = 'itchyny/lightline.vim'
 # hook_add = '''
-# source ~/.vim/nvim/plugins/lightline.rc.vim
+# source ~/dotfiles-re/nvim/plugins/lightline.rc.vim
 # '''
 
 # 無駄な空白をハイライト
@@ -156,7 +166,7 @@ on_ft = 'coffee'
 # # インデントをハイライト
 # repo = 'nathanaelkane/vim-indent-guides'
 # hook_add = '''
-# source ~/.vim/nvim/plugins/indent.rc.vim
+# source ~/dotfiles-re/nvim/plugins/indent.rc.vim
 # '''
 # ==========================================================
 # web apis

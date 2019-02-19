@@ -20,5 +20,5 @@ au MyAutoCmd VimEnter * highlight Visual ctermbg=216
 [[plugins]]
 repo = 'w0rp/ale'
 hook_add = '''
-source ~/.vim/nvim/plugins/ale.rc.vim
+source ~/dotfiles-re/nvim/plugins/ale.rc.vim
 '''

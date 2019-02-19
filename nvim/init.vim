@@ -8,7 +8,7 @@ augroup END
 
 function! s:source_rc(path, ...) abort "{{{
 	let use_global = get(a:000, 0, !has('vim_starting'))
-	let abspath = resolve(expand('~/.vim/nvim/' . a:path))
+	let abspath = resolve(expand('~/dotfiles-re/nvim/' . a:path))
 	if !use_global
 		execute 'source' fnameescape(abspath)
 		return
@@ -53,8 +53,8 @@ endif
 
 if dein#load_state(s:dein_cache_path)
   call dein#begin(s:dein_cache_path)
-  call dein#load_toml('~/dotfiles-re/dot.vim/nvim/dein.toml', {'lazy' : 0})
-  call dein#load_toml('~/dotfiles-re/dot.vim/nvim/dein_lazy.toml', {'lazy' : 1})
+  call dein#load_toml('~/dotfiles-re/nvim/dein.toml', {'lazy' : 0})
+  call dein#load_toml('~/dotfiles-re/nvim/dein_lazy.toml', {'lazy' : 1})
 
   if exists('g:nyaovim_version')
     call dein#add('rhysd/nyaovim-popup-tooltip')

@@ -43,9 +43,34 @@ on_source = ['Shougo/denite.nvim']
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
+on_event = 'InsertEnter'
 hook_add = '''
 source ~/dotfiles-re/nvim/plugins/deoplete.rc.vim
 '''
+
+# Snippet
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+hook_add = 'let g:neosnippet#enable_completed_snippet = 1'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+# JavaScript
+[[plugins]]
+repo = 'wokalski/autocomplete-flow'
+on_source = ['Shougo/deoplete.nvim']
+
+# Ruby
+[[plugins]]
+repo = 'Shougo/deoplete-rct'
+on_ft = ['ruby']
+on_source = ['Shougo/deoplete.nvim']
+
+[[plugins]]
+repo = 'fishbullet/deoplete-ruby'
+on_ft = ['ruby']
+on_source = ['Shougo/deoplete.nvim']
 
 # ==========================================================
 # terminal

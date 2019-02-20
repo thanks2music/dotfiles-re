@@ -41,9 +41,9 @@ binaries=(
   libxml2
   libxslt
   libyaml
-  mas
-  glide
-  heroku
+  # mas
+  # glide
+  # heroku
   pngquant
 )
 
@@ -90,12 +90,12 @@ apps=(
   licecap
   # mamp
   transmission
-  ip-in-menu-bar
+  # ip-in-menu-bar
   # wireshark
   # gyazo
   imageoptim
   chromium
-  kindle
+  # kindle
   local-by-flywheel
 )
 
